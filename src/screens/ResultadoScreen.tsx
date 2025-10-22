@@ -6,6 +6,7 @@ import {
   StyleSheet,
   ScrollView,
   Dimensions,
+  Platform,
 } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
@@ -49,7 +50,18 @@ const ResultadoScreen: React.FC<ResultadoScreenProps> = ({ navigation, route }) 
   );
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+    <ScrollView 
+      style={[
+        styles.container,
+        Platform.OS === 'web' && { height: '100vh' as any, overflow: 'auto' as any }
+      ]} 
+      contentContainerStyle={[
+        styles.contentContainer,
+        Platform.OS === 'web' && { minHeight: '100vh' as any }
+      ]}
+      showsVerticalScrollIndicator={Platform.OS === 'web'}
+      bounces={Platform.OS !== 'web'}
+    >
       <View style={styles.header}>
         <Text style={styles.iconeResultado}>{getIconeDesempenho()}</Text>
         <Text style={styles.titulo}>Quiz Finalizado!</Text>

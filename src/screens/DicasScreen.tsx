@@ -6,6 +6,7 @@ import {
   FlatList,
   TouchableOpacity,
   ScrollView,
+  Platform,
 } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
@@ -49,7 +50,10 @@ const DicasScreen: React.FC<DicasScreenProps> = ({ navigation }) => {
   );
 
   return (
-    <View style={styles.container}>
+    <View style={[
+      styles.container,
+      Platform.OS === 'web' && { height: '100vh' as any, overflow: 'hidden' as any }
+    ]}>
       <View style={styles.header}>
         <Text style={styles.title}>💧 Dicas de Economia de Água</Text>
         <Text style={styles.subtitle}>
@@ -59,9 +63,10 @@ const DicasScreen: React.FC<DicasScreenProps> = ({ navigation }) => {
 
       <ScrollView 
         horizontal 
-        showsHorizontalScrollIndicator={false}
+        showsHorizontalScrollIndicator={Platform.OS === 'web'}
         style={styles.categoriasContainer}
         contentContainerStyle={styles.categoriasContent}
+        bounces={Platform.OS !== 'web'}
       >
         {categorias.map(renderCategoriaButton)}
       </ScrollView>
@@ -86,7 +91,8 @@ const DicasScreen: React.FC<DicasScreenProps> = ({ navigation }) => {
         renderItem={renderDica}
         keyExtractor={(item, index) => `${item.categoria}-${index}`}
         contentContainerStyle={styles.listContainer}
-        showsVerticalScrollIndicator={false}
+        showsVerticalScrollIndicator={Platform.OS === 'web'}
+        bounces={Platform.OS !== 'web'}
       />
 
       <View style={styles.footer}>

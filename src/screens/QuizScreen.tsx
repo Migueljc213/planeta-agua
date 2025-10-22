@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Alert,
   BackHandler,
+  Platform,
 } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList, QuizState, Pergunta } from '../types';
@@ -200,7 +201,10 @@ const QuizScreen: React.FC<QuizScreenProps> = ({ navigation }) => {
   const perguntaAtual = perguntasQuiz[quizState.perguntaAtual];
 
   return (
-    <View style={styles.container}>
+    <View style={[
+      styles.container,
+      Platform.OS === 'web' && { height: '100vh' as any, overflow: 'auto' as any }
+    ]}>
       <QuizCard
         pergunta={perguntaAtual.pergunta}
         opcoes={respostasMultiplas}

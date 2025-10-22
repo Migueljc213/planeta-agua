@@ -1,7 +1,12 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { StatusBar } from 'react-native';
+import { StatusBar, Platform } from 'react-native';
+
+// Importar CSS para web
+if (Platform.OS === 'web') {
+  require('./web.css');
+}
 
 import { RootStackParamList } from './src/types';
 import HomeScreen from './src/screens/HomeScreen';
@@ -15,7 +20,12 @@ const App: React.FC = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor="#f0f8ff" />
-      <NavigationContainer>
+      <NavigationContainer
+        // Configurações específicas para web para melhorar o scroll
+        {...(Platform.OS === 'web' && {
+          style: { height: '100vh' },
+        })}
+      >
         <Stack.Navigator
           initialRouteName="Home"
           screenOptions={{

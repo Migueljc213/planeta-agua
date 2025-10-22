@@ -7,6 +7,7 @@ import {
   ScrollView,
   Dimensions,
   ImageBackground,
+  Platform,
 } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
@@ -21,7 +22,18 @@ const { width, height } = Dimensions.get('window');
 
 const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+    <ScrollView 
+      style={[
+        styles.container,
+        Platform.OS === 'web' && { height: '100vh' as any, overflow: 'auto' as any }
+      ]} 
+      contentContainerStyle={[
+        styles.contentContainer,
+        Platform.OS === 'web' && { minHeight: '100vh' as any }
+      ]}
+      showsVerticalScrollIndicator={Platform.OS === 'web'}
+      bounces={Platform.OS !== 'web'}
+    >
       <View style={styles.header}>
         <Text style={styles.title}>🌊 Planeta Água</Text>
         <Text style={styles.subtitle}>

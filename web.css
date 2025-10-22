@@ -1,0 +1,45 @@
+/* Configurações específicas para web para melhorar o scroll */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Garantir que ScrollViews funcionem corretamente na web */
+.scroll-view-web {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Melhorar a experiência de scroll na web */
+.scroll-view-web::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-view-web::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.scroll-view-web::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 4px;
+}
+
+.scroll-view-web::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}
+
+/* Garantir que containers principais tenham altura adequada */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
