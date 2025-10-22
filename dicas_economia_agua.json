@@ -1,0 +1,86 @@
+[
+  {
+    "dica": "Tome banhos mais curtos. Reduzir o tempo no chuveiro de 10 para 5 minutos pode economizar até 100 litros de água.",
+    "categoria": "Banho"
+  },
+  {
+    "dica": "Feche a torneira ao escovar os dentes. Isso pode economizar até 12 litros de água por minuto.",
+    "categoria": "Higiene Pessoal"
+  },
+  {
+    "dica": "Verifique se há vazamentos em torneiras e canos. Um pequeno gotejamento pode desperdiçar até 20.000 litros de água por ano.",
+    "categoria": "Manutenção"
+  },
+  {
+    "dica": "Use a máquina de lavar roupa e a de lavar louça apenas quando estiverem cheias. Isso otimiza o uso da água e da energia.",
+    "categoria": "Eletrodomésticos"
+  },
+  {
+    "dica": "Reutilize a água do cozimento de vegetais para regar as plantas. Ela é rica em nutrientes.",
+    "categoria": "Cozinha"
+  },
+  {
+    "dica": "Instale um arejador de torneira. Ele mistura ar com a água, reduzindo o fluxo sem diminuir a pressão, economizando até 50% de água.",
+    "categoria": "Equipamentos"
+  },
+  {
+    "dica": "Lave o carro com um balde e uma esponja em vez de uma mangueira. Isso pode economizar até 300 litros de água.",
+    "categoria": "Limpeza Externa"
+  },
+  {
+    "dica": "Regue as plantas no início da manhã ou no final da tarde para evitar a evaporação da água.",
+    "categoria": "Jardinagem"
+  },
+  {
+    "dica": "Use uma vassoura em vez de uma mangueira para limpar calçadas e pátios.",
+    "categoria": "Limpeza Externa"
+  },
+  {
+    "dica": "Colete a água da chuva para regar as plantas e lavar áreas externas.",
+    "categoria": "Jardinagem"
+  }
+
+
+,
+  {
+    "dica": "Ao lavar a louça, primeiro ensaboe tudo e depois enxágue de uma só vez. Não deixe a torneira aberta enquanto ensaboa.",
+    "categoria": "Cozinha"
+  },
+  {
+    "dica": "Use a descarga com moderação. Descargas mais antigas podem usar até 14 litros de água por acionamento. Considere instalar um sistema de duplo acionamento.",
+    "categoria": "Banheiro"
+  },
+  {
+    "dica": "Não jogue lixo no vaso sanitário. Isso evita o uso desnecessário da descarga.",
+    "categoria": "Banheiro"
+  },
+  {
+    "dica": "Use um balde para coletar a água fria do chuveiro enquanto espera a água esquentar. Use essa água para regar as plantas ou para a descarga.",
+    "categoria": "Banho"
+  },
+  {
+    "dica": "Lave frutas e vegetais em uma tigela com água em vez de em água corrente.",
+    "categoria": "Cozinha"
+  },
+  {
+    "dica": "Descongele alimentos na geladeira ou no micro-ondas, não em água corrente.",
+    "categoria": "Cozinha"
+  },
+  {
+    "dica": "Use cobertura morta (como folhas secas ou aparas de grama) ao redor das plantas para reter a umidade do solo e reduzir a necessidade de rega.",
+    "categoria": "Jardinagem"
+  },
+  {
+    "dica": "Escolha plantas nativas ou resistentes à seca para o seu jardim, pois elas requerem menos água.",
+    "categoria": "Jardinagem"
+  },
+  {
+    "dica": "Ajuste os aspersores para que eles reguem apenas o seu gramado, não a calçada ou a rua.",
+    "categoria": "Jardinagem"
+  },
+  {
+    "dica": "Evite brinquedos que exijam um fluxo constante de água. Em vez disso, use uma pequena piscina infantil.",
+    "categoria": "Lazer"
+  }
+]
+
